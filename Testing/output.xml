@@ -1,0 +1,830 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.3 on win32)" generated="2024-06-25T14:07:00.643346" rpa="false" schemaversion="5">
+<suite id="s1" name="Login" source="C:\Users\A. Sahithi\PycharmProjects\CardinalHealth\Testing\login.robot">
+<test id="s1-t1" name="Login" line="19">
+<kw name="login in to cardinal" owner="Lookerversion">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-06-25T14:07:02.836239" level="INFO">Opening browser 'chrome' to base url 'https://specialtyanalytics.cardinalhealth.com/'.</msg>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-06-25T14:07:02.835199" elapsed="3.705980"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-06-25T14:07:06.542590" elapsed="0.781454"/>
+</kw>
+<kw name="Set Selenium Speed" owner="SeleniumLibrary">
+<arg>1</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" start="2024-06-25T14:07:07.324044" elapsed="0.001218"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=okta-signin-username</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-06-25T14:07:07.325262" elapsed="5.532626"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-06-25T14:07:12.859084" level="INFO">Typing text 'rozario_joseph' into text field 'id=okta-signin-username'.</msg>
+<arg>id=okta-signin-username</arg>
+<arg>${USERNAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-25T14:07:12.859084" elapsed="3.155194"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-06-25T14:07:16.014278" level="INFO">Typing text 'Info@@712' into text field 'id= okta-signin-password'.</msg>
+<arg>id= okta-signin-password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-25T14:07:16.014278" elapsed="3.186248"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-06-25T14:07:19.200526" level="INFO">Clicking button 'id=okta-signin-submit'.</msg>
+<arg>id=okta-signin-submit</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-25T14:07:19.200526" elapsed="3.117484"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>(//button[@class='mat-focus-indicator mat-menu-trigger topNavButton black-font mat-button mat-button-base'])[2]</arg>
+<arg>timeout= 30sec</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-06-25T14:07:22.318010" elapsed="13.229303"/>
+</kw>
+<kw name="Get Window Handles" owner="SeleniumLibrary">
+<msg time="2024-06-25T14:07:36.550803" level="INFO">${initial_window} = ['8F57FE8F82DFBDF7302D08CFA90DE1B8']</msg>
+<var>${initial_window}</var>
+<doc>Returns all child window handles of the selected browser as a list.</doc>
+<status status="PASS" start="2024-06-25T14:07:35.547313" elapsed="1.003490"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>initial window: ${initial_window}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-06-25T14:07:36.550803" elapsed="0.000000"/>
+</kw>
+<kw name="Get Location" owner="SeleniumLibrary">
+<msg time="2024-06-25T14:07:37.561547" level="INFO">${initial_url} = https://specialtyanalytics.cardinalhealth.com/landing?userId=rozario_joseph</msg>
+<var>${initial_url}</var>
+<doc>Returns the current browser window URL.</doc>
+<status status="PASS" start="2024-06-25T14:07:36.551845" elapsed="1.009702"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>inital URL: ${initial_url}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-06-25T14:07:37.561547" elapsed="0.001004"/>
+</kw>
+<doc>Test to interact with the Bootstrap icon</doc>
+<status status="PASS" start="2024-06-25T14:07:02.832369" elapsed="34.730182"/>
+</kw>
+<status status="PASS" start="2024-06-25T14:07:02.832369" elapsed="34.731182"/>
+</test>
+<test id="s1-t2" name="open looker Dashboard" line="23">
+<kw name="Dashboard" owner="Lookerversion">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>(//button[@class='mat-focus-indicator mat-menu-trigger topNavButton black-font mat-button mat-button-base'])[2]</arg>
+<arg>timeout= 30sec</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-06-25T14:07:37.564551" elapsed="2.089274"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-06-25T14:07:39.653825" level="INFO">Clicking element '(//button[@class='mat-focus-indicator mat-menu-trigger topNavButton black-font mat-button mat-button-base'])[2]'.</msg>
+<arg>(//button[@class='mat-focus-indicator mat-menu-trigger topNavButton black-font mat-button mat-button-base'])[2]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-25T14:07:39.653825" elapsed="5.396449"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//a[normalize-space()='Revenue Cycle']</arg>
+<arg>timeout= 30sec</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-06-25T14:07:45.050274" elapsed="2.033063"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-06-25T14:07:47.084815" level="INFO">Clicking element '//a[normalize-space()='Revenue Cycle']'.</msg>
+<arg>//a[normalize-space()='Revenue Cycle']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-25T14:07:47.083337" elapsed="2.242933"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//span[normalize-space()='Charge Details']</arg>
+<arg>timeout= 30s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-06-25T14:07:49.326270" elapsed="2.034592"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-06-25T14:07:51.360862" level="INFO">Clicking element '//span[normalize-space()='Charge Details']'.</msg>
+<arg>//span[normalize-space()='Charge Details']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-25T14:07:51.360862" elapsed="2.535462"/>
+</kw>
+<status status="PASS" start="2024-06-25T14:07:37.564551" elapsed="16.331773"/>
+</kw>
+<kw name="filters" owner="Lookerversion">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>(//button[@class='mat-focus-indicator mat-menu-trigger topNavButton black-font mat-button mat-button-base'])[2]</arg>
+<arg>timeout= 30sec</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-06-25T14:07:53.899505" elapsed="2.027278"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-06-25T14:07:55.928223" level="INFO">Clicking element '(//span[@class='ng-arrow-wrapper'])[1]'.</msg>
+<arg>(//span[@class='ng-arrow-wrapper'])[1]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-25T14:07:55.926783" elapsed="2.337786"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-06-25T14:07:58.265663" level="INFO">${checkbox_xpath1} = xpath=//span[@class='ng-star-inserted'][normalize-space()='Alabama Oncology']</msg>
+<var>${checkbox_xpath1}</var>
+<arg>xpath=//span[@class='ng-star-inserted'][normalize-space()='Alabama Oncology']</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-06-25T14:07:58.264569" elapsed="0.001094"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${checkbox_xpath1}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-06-25T14:07:58.265663" elapsed="2.029460"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-06-25T14:08:00.300301" level="INFO">Clicking element 'xpath=//span[@class='ng-star-inserted'][normalize-space()='Alabama Oncology']'.</msg>
+<arg>${checkbox_xpath1}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-25T14:08:00.299263" elapsed="2.070120"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-06-25T14:08:02.370414" level="INFO">Clicking element 'xpath://mat-icon[normalize-space()='calendar_month']'.</msg>
+<arg>xpath://mat-icon[normalize-space()='calendar_month']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-25T14:08:02.370414" elapsed="2.089007"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-06-25T14:08:04.460627" level="INFO">${month_option_xpath} = //span[normalize-space()='Previous Year']</msg>
+<var>${month_option_xpath}</var>
+<arg>//span[normalize-space()='Previous Year']</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-06-25T14:08:04.459421" elapsed="0.001206"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${month_option_xpath}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-06-25T14:08:04.461703" elapsed="2.032461"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-06-25T14:08:06.495748" level="INFO">Clicking element '//span[normalize-space()='Previous Year']'.</msg>
+<arg>${month_option_xpath}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-25T14:08:06.494689" elapsed="2.092383"/>
+</kw>
+<status status="PASS" start="2024-06-25T14:07:53.897491" elapsed="14.689581"/>
+</kw>
+<kw name="click apply" owner="Lookerversion">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-06-25T14:08:08.589166" level="INFO">Clicking element 'xpath://button[normalize-space()='Apply Filters']'.</msg>
+<arg>xpath://button[normalize-space()='Apply Filters']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-25T14:08:08.589166" elapsed="2.319021"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath://button[normalize-space()='Apply Filters']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-06-25T14:08:10.909197" elapsed="2.096778"/>
+</kw>
+<status status="PASS" start="2024-06-25T14:08:08.588166" elapsed="4.418327"/>
+</kw>
+<kw name="Retrieve patient count from looker" owner="Lookerversion">
+<kw name="Get Window Handles" owner="SeleniumLibrary">
+<msg time="2024-06-25T14:08:14.012093" level="INFO">${all_windows} = ['8F57FE8F82DFBDF7302D08CFA90DE1B8']</msg>
+<var>${all_windows}</var>
+<doc>Returns all child window handles of the selected browser as a list.</doc>
+<status status="PASS" start="2024-06-25T14:08:13.007594" elapsed="1.004499"/>
+</kw>
+<kw name="Switch Window" owner="SeleniumLibrary">
+<arg>${all_windows}[0]</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" start="2024-06-25T14:08:14.012093" elapsed="4.027666"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${IFRAME_LOCATOR}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-06-25T14:08:18.039759" elapsed="2.060542"/>
+</kw>
+<kw name="Select Frame" owner="SeleniumLibrary">
+<msg time="2024-06-25T14:08:20.101831" level="INFO">Selecting frame '//iframe[@class='lookerIFrameClass']'.</msg>
+<arg>${IFRAME_LOCATOR}</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<status status="PASS" start="2024-06-25T14:08:20.100301" elapsed="2.047695"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-06-25T14:08:24.193756" level="INFO">${new_value} = 28,339</msg>
+<var>${new_value}</var>
+<arg>${looker_patient_served}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-25T14:08:22.149021" elapsed="2.044735"/>
+</kw>
+<kw name="Set Global Variable" owner="BuiltIn">
+<msg time="2024-06-25T14:08:24.202581" level="INFO">${new_value} = 28,339</msg>
+<arg>${new_value}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="PASS" start="2024-06-25T14:08:24.200354" elapsed="0.002227"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Patient served from new website: ${new_value}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-06-25T14:08:24.202581" elapsed="0.001322"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-06-25T14:08:26.229821" level="INFO">${new_charge} = $732,047,790</msg>
+<var>${new_charge}</var>
+<arg>${looker_total_charge}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-25T14:08:24.203903" elapsed="2.025918"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Total charges from new website: ${new_charge}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-06-25T14:08:26.230878" elapsed="0.000000"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-06-25T14:08:28.266168" level="INFO">${new_patient} = 6,110</msg>
+<var>${new_patient}</var>
+<arg>${looker_new_patient}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-25T14:08:26.231897" elapsed="2.034271"/>
+</kw>
+<kw name="Set Global Variable" owner="BuiltIn">
+<msg time="2024-06-25T14:08:28.268180" level="INFO">${new_patient} = 6,110</msg>
+<arg>${new_patient}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="PASS" start="2024-06-25T14:08:28.267176" elapsed="0.001004"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>New patients visited from new website: ${new_patient}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-06-25T14:08:28.269181" elapsed="0.000000"/>
+</kw>
+<kw name="Unselect Frame" owner="SeleniumLibrary">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" start="2024-06-25T14:08:28.269181" elapsed="1.006177"/>
+</kw>
+<status status="PASS" start="2024-06-25T14:08:13.007594" elapsed="16.267764"/>
+</kw>
+<status status="PASS" start="2024-06-25T14:07:37.563551" elapsed="51.711807"/>
+</test>
+<test id="s1-t3" name="Previous Version" line="29">
+<kw name="Take me back to previous version" owner="QlikVersion">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-06-25T14:08:29.279365" level="INFO">Clicking element '//a[normalize-space()='Take me back to Previous Version']'.</msg>
+<arg>//a[normalize-space()='Take me back to Previous Version']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-25T14:08:29.279365" elapsed="2.152204"/>
+</kw>
+<kw name="Get Window Handles" owner="SeleniumLibrary">
+<msg time="2024-06-25T14:08:32.438960" level="INFO">${all_windows} = ['8F57FE8F82DFBDF7302D08CFA90DE1B8', 'CB2F1F2D6ADE6A16E1A6F1F372AE7A29']</msg>
+<var>${all_windows}</var>
+<doc>Returns all child window handles of the selected browser as a list.</doc>
+<status status="PASS" start="2024-06-25T14:08:31.432601" elapsed="1.006359"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-06-25T14:08:32.438960" level="INFO">${first_window} = CB2F1F2D6ADE6A16E1A6F1F372AE7A29</msg>
+<var>${first_window}</var>
+<arg>${all_windows}[-1]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-06-25T14:08:32.438960" elapsed="0.000000"/>
+</kw>
+<kw name="Get Location" owner="SeleniumLibrary">
+<msg time="2024-06-25T14:08:33.450998" level="INFO">${first_url} = https://specialtyanalytics.cardinalhealth.com/apa/revenue-cycle/charge-details</msg>
+<var>${first_url}</var>
+<doc>Returns the current browser window URL.</doc>
+<status status="PASS" start="2024-06-25T14:08:32.440459" elapsed="1.010539"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>First_tab_url: ${first_url}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-06-25T14:08:33.452366" elapsed="0.000000"/>
+</kw>
+<kw name="Switch Window" owner="SeleniumLibrary">
+<arg>${first_window}</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" start="2024-06-25T14:08:33.452366" elapsed="9.139225"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>xpath=//td[normalize-space()='Analytics Center']</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-06-25T14:08:42.594708" elapsed="1.019776"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-06-25T14:08:45.642285" level="INFO">${element_text} =   Analytics Center</msg>
+<var>${element_text}</var>
+<arg>xpath=//td[normalize-space()='Analytics Center']</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-25T14:08:43.614484" elapsed="2.027801"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-06-25T14:08:45.642285" level="INFO">Text in new window:   Analytics Center</msg>
+<arg>Text in new window: ${element_text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-06-25T14:08:45.642285" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-06-25T14:08:45.643790" level="INFO">Clicking element '//td[normalize-space()='Diagnosis Management']'.</msg>
+<arg>//td[normalize-space()='Diagnosis Management']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-25T14:08:45.643790" elapsed="2.071689"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//td[contains(text(),'How many patients are associated with a diagnosis?')]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-06-25T14:08:47.715479" elapsed="2.027443"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-06-25T14:08:49.742922" level="INFO">Clicking element '//*[@id="76"]/div[2]/table/tbody/tr/td'.</msg>
+<arg>//*[@id="76"]/div[2]/table/tbody/tr/td</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-25T14:08:49.742922" elapsed="2.077397"/>
+</kw>
+<status status="PASS" start="2024-06-25T14:08:29.277363" elapsed="22.542956"/>
+</kw>
+<kw name="Open second window" owner="QlikVersion">
+<kw name="Get Window Handles" owner="SeleniumLibrary">
+<msg time="2024-06-25T14:08:52.863450" level="INFO">${all_windows} = ['8F57FE8F82DFBDF7302D08CFA90DE1B8', 'CB2F1F2D6ADE6A16E1A6F1F372AE7A29', 'D980B6A33087E831F4FEDB0E59E5021D']</msg>
+<var>${all_windows}</var>
+<doc>Returns all child window handles of the selected browser as a list.</doc>
+<status status="PASS" start="2024-06-25T14:08:51.820319" elapsed="1.043131"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-06-25T14:08:52.863958" level="INFO">${second_tab} = D980B6A33087E831F4FEDB0E59E5021D</msg>
+<var>${second_tab}</var>
+<arg>${all_windows}[-1]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-06-25T14:08:52.863958" elapsed="0.000000"/>
+</kw>
+<kw name="Switch Window" owner="SeleniumLibrary">
+<arg>${second_tab}</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" start="2024-06-25T14:08:52.863958" elapsed="14.146166"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//span[normalize-space()='Diagnosis']</arg>
+<arg>timeout= 30s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-06-25T14:09:07.010124" elapsed="2.038175"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-06-25T14:09:09.048299" level="INFO">Clicking element '//span[normalize-space()='Diagnosis']'.</msg>
+<arg>//span[normalize-space()='Diagnosis']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-25T14:09:09.048299" elapsed="2.079485"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-06-25T14:09:14.128055" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-06-25T14:09:11.127784" elapsed="3.000271"/>
+</kw>
+<status status="PASS" start="2024-06-25T14:08:51.820319" elapsed="22.307736"/>
+</kw>
+<kw name="Qlik unselect month" owner="QlikVersion">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//div[contains(@class,'QvFrame') and contains(@class,'Document_CS30')]/div[2]/div/div[1]/div[5]/div/div[3]/div[2]/div/img</arg>
+<arg>timeout= 20s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-06-25T14:09:14.129123" elapsed="2.026407"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-06-25T14:09:16.155530" level="INFO">Clicking element '//div[contains(@class,'QvFrame') and contains(@class,'Document_CS30')]/div[2]/div/div[1]/div[5]/div/div[3]/div[2]/div/img'.</msg>
+<arg>//div[contains(@class,'QvFrame') and contains(@class,'Document_CS30')]/div[2]/div/div[1]/div[5]/div/div[3]/div[2]/div/img</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-25T14:09:16.155530" elapsed="2.047500"/>
+</kw>
+<status status="PASS" start="2024-06-25T14:09:14.129123" elapsed="4.073907"/>
+</kw>
+<kw name="Qlik select year" owner="QlikVersion">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-06-25T14:09:18.204134" level="INFO">Clicking element '//div[@class='QvContent']/div[@class='QvListbox']/div/div[@title='2023']/div[1]'.</msg>
+<arg>//div[@class='QvContent']/div[@class='QvListbox']/div/div[@title='2023']/div[1]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-25T14:09:18.203030" elapsed="2.061334"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-06-25T14:09:23.264479" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-06-25T14:09:20.264364" elapsed="3.000115"/>
+</kw>
+<status status="PASS" start="2024-06-25T14:09:18.203030" elapsed="5.061449"/>
+</kw>
+<status status="PASS" start="2024-06-25T14:08:29.276366" elapsed="53.988113"/>
+</test>
+<test id="s1-t4" name="Retrieve Values" line="37">
+<kw name="Retrieve patient served from Qlik" owner="QlikVersion">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-06-25T14:09:23.266682" level="INFO">Clicking element '//td[@title='Fast Change']'.</msg>
+<arg>//td[@title='Fast Change']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-25T14:09:23.266682" elapsed="2.075429"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//td[@title='Fast Change']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-06-25T14:09:25.342111" elapsed="2.021427"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-06-25T14:09:29.363857" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-06-25T14:09:27.363538" elapsed="2.000319"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-06-25T14:09:31.408041" level="INFO">${old_value} = 28,339</msg>
+<var>${old_value}</var>
+<arg>${Qlik_patient_served}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-25T14:09:29.363857" elapsed="2.044184"/>
+</kw>
+<kw name="Set Global Variable" owner="BuiltIn">
+<msg time="2024-06-25T14:09:31.409351" level="INFO">${old_value} = 28,339</msg>
+<arg>${old_value}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="PASS" start="2024-06-25T14:09:31.408041" elapsed="0.001310"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Patients served from old website: ${old_value}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-06-25T14:09:31.409351" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-06-25T14:09:23.265499" elapsed="8.143852"/>
+</kw>
+<kw name="Retrieve Total charges from Qlik" owner="QlikVersion">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//div[@title='Service Summary']//div[@title='Fast change']</arg>
+<arg>timeout= 20</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-06-25T14:09:31.409351" elapsed="2.027984"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-06-25T14:09:33.437335" level="INFO">Clicking element '//div[@title='Service Summary']//div[@title='Fast change']'.</msg>
+<arg>//div[@title='Service Summary']//div[@title='Fast change']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-25T14:09:33.437335" elapsed="2.061880"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-06-25T14:09:37.499455" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-06-25T14:09:35.499215" elapsed="2.000240"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-06-25T14:09:39.533609" level="INFO">${old_charge} = $730,473,193.43</msg>
+<var>${old_charge}</var>
+<arg>${Qlik_total_charges}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-25T14:09:37.499455" elapsed="2.034154"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Total charges from old website: ${old_charge}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-06-25T14:09:39.533609" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-06-25T14:09:31.409351" elapsed="8.124258"/>
+</kw>
+<kw name="Retrieve Patient count from Qlik" owner="QlikVersion">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//span[normalize-space()='New Patient']</arg>
+<arg>timeout= 60s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-06-25T14:09:39.535024" elapsed="2.026265"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-06-25T14:09:41.561289" level="INFO">Clicking element '//span[normalize-space()='New Patient']'.</msg>
+<arg>//span[normalize-space()='New Patient']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-25T14:09:41.561289" elapsed="2.087081"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-06-25T14:09:46.648442" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-06-25T14:09:43.648370" elapsed="3.000072"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-06-25T14:09:46.648442" level="INFO">Clicking element '//div[@title='New Office Visits']//div[@title='Send to Excel']'.</msg>
+<arg>//div[@title='New Office Visits']//div[@title='Send to Excel']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-25T14:09:46.648442" elapsed="2.059887"/>
+</kw>
+<status status="PASS" start="2024-06-25T14:09:39.535024" elapsed="9.173305"/>
+</kw>
+<kw name="Get Patient Visit" owner="SeleniumPython">
+<msg time="2024-06-25T14:09:49.880169" level="INFO">Month-Year  Value
+0                          Jan 2023  485.0
+1                          Feb 2023  474.0
+2                          Mar 2023  502.0
+3                          Apr 2023  519.0
+4                          May 2023  541.0
+5                          Jun 2023  520.0
+6                          Jul 2023  474.0
+7                          Aug 2023  581.0
+8                          Sep 2023  474.0
+9                          Oct 2023  622.0
+10                         Nov 2023  523.0
+11                         Dec 2023  483.0
+12                              NaN    NaN
+13                Selection Status:    NaN
+14                       Year: 2023    NaN
+15  Practice Name: Alabama Oncology    NaN
+Patient_visit 6198.0</msg>
+<msg time="2024-06-25T14:09:49.880169" level="INFO">${patient_visit} = 6198.0</msg>
+<var>${patient_visit}</var>
+<status status="PASS" start="2024-06-25T14:09:48.708329" elapsed="1.171840"/>
+</kw>
+<kw name="Set Global Variable" owner="BuiltIn">
+<msg time="2024-06-25T14:09:49.883066" level="INFO">${patient_visit} = 6198.0</msg>
+<arg>${patient_visit}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="PASS" start="2024-06-25T14:09:49.881597" elapsed="0.001469"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${patient_visit}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-06-25T14:09:49.883066" elapsed="0.001239"/>
+</kw>
+<kw name="Retrieve patient count from looker" owner="Lookerversion">
+<kw name="Get Window Handles" owner="SeleniumLibrary">
+<msg time="2024-06-25T14:09:50.906659" level="INFO">${all_windows} = ['8F57FE8F82DFBDF7302D08CFA90DE1B8', 'CB2F1F2D6ADE6A16E1A6F1F372AE7A29', 'D980B6A33087E831F4FEDB0E59E5021D']</msg>
+<var>${all_windows}</var>
+<doc>Returns all child window handles of the selected browser as a list.</doc>
+<status status="PASS" start="2024-06-25T14:09:49.885455" elapsed="1.021204"/>
+</kw>
+<kw name="Switch Window" owner="SeleniumLibrary">
+<arg>${all_windows}[0]</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" start="2024-06-25T14:09:50.906659" elapsed="4.032115"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${IFRAME_LOCATOR}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-06-25T14:09:54.938774" elapsed="2.022011"/>
+</kw>
+<kw name="Select Frame" owner="SeleniumLibrary">
+<msg time="2024-06-25T14:09:56.960785" level="INFO">Selecting frame '//iframe[@class='lookerIFrameClass']'.</msg>
+<arg>${IFRAME_LOCATOR}</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<status status="PASS" start="2024-06-25T14:09:56.960785" elapsed="2.032493"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-06-25T14:10:01.075598" level="INFO">${new_value} = 28,339</msg>
+<var>${new_value}</var>
+<arg>${looker_patient_served}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-25T14:09:58.993278" elapsed="2.082320"/>
+</kw>
+<kw name="Set Global Variable" owner="BuiltIn">
+<msg time="2024-06-25T14:10:01.075598" level="INFO">${new_value} = 28,339</msg>
+<arg>${new_value}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="PASS" start="2024-06-25T14:10:01.075598" elapsed="0.001484"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Patient served from new website: ${new_value}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-06-25T14:10:01.077082" elapsed="0.000000"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-06-25T14:10:03.104141" level="INFO">${new_charge} = $732,047,790</msg>
+<var>${new_charge}</var>
+<arg>${looker_total_charge}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-25T14:10:01.077082" elapsed="2.027566"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Total charges from new website: ${new_charge}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-06-25T14:10:03.105652" elapsed="0.001000"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-06-25T14:10:05.160609" level="INFO">${new_patient} = 6,110</msg>
+<var>${new_patient}</var>
+<arg>${looker_new_patient}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-25T14:10:03.107652" elapsed="2.053960"/>
+</kw>
+<kw name="Set Global Variable" owner="BuiltIn">
+<msg time="2024-06-25T14:10:05.162612" level="INFO">${new_patient} = 6,110</msg>
+<arg>${new_patient}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="PASS" start="2024-06-25T14:10:05.161612" elapsed="0.001000"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>New patients visited from new website: ${new_patient}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-06-25T14:10:05.162612" elapsed="0.000000"/>
+</kw>
+<kw name="Unselect Frame" owner="SeleniumLibrary">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" start="2024-06-25T14:10:05.162612" elapsed="1.038032"/>
+</kw>
+<status status="PASS" start="2024-06-25T14:09:49.884305" elapsed="16.316844"/>
+</kw>
+<status status="PASS" start="2024-06-25T14:09:23.264479" elapsed="42.936670"/>
+</test>
+<test id="s1-t5" name="Compare Cleaned Numbers" line="48">
+<kw name="Convert To String" owner="BuiltIn">
+<msg time="2024-06-25T14:10:06.207895" level="INFO">${looker_number} = 6,110</msg>
+<var>${looker_number}</var>
+<arg>${new_patient}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<status status="PASS" start="2024-06-25T14:10:06.206592" elapsed="0.001303"/>
+</kw>
+<kw name="Convert To String" owner="BuiltIn">
+<msg time="2024-06-25T14:10:06.208898" level="INFO">${qlik_number} = 6198.0</msg>
+<var>${qlik_number}</var>
+<arg>${patient_visit}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<status status="PASS" start="2024-06-25T14:10:06.208898" elapsed="0.000000"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Cleaned Looker value: ${looker_number}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-06-25T14:10:06.208898" elapsed="0.001359"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Cleaned Qlik value: ${qlik_number}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-06-25T14:10:06.210257" elapsed="0.000000"/>
+</kw>
+<kw name="Should Not Be Equal" owner="BuiltIn">
+<arg>${new_patient}</arg>
+<arg>${qlik_number}</arg>
+<doc>Fails if the given objects are equal.</doc>
+<status status="PASS" start="2024-06-25T14:10:06.212762" elapsed="0.004711"/>
+</kw>
+<doc>Compare dynamically fetched values after cleaning.</doc>
+<status status="PASS" start="2024-06-25T14:10:06.202153" elapsed="0.015320"/>
+</test>
+<test id="s1-t6" name="Payment details" line="60">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//a[normalize-space()="Payment Details"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-06-25T14:10:06.219473" elapsed="2.089479"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-06-25T14:10:08.310324" level="INFO">Clicking element '//a[normalize-space()="Payment Details"]'.</msg>
+<arg>//a[normalize-space()="Payment Details"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-25T14:10:08.308952" elapsed="2.573165"/>
+</kw>
+<kw name="Payment details Amount payed" owner="Lookerversion">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${IFRAME_LOCATOR}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-06-25T14:10:10.882117" elapsed="5.092725"/>
+</kw>
+<kw name="Select Frame" owner="SeleniumLibrary">
+<msg time="2024-06-25T14:10:15.980054" level="INFO">Selecting frame '//iframe[@class='lookerIFrameClass']'.</msg>
+<arg>${IFRAME_LOCATOR}</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<status status="PASS" start="2024-06-25T14:10:15.976845" elapsed="3.842700"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-06-25T14:10:21.943857" level="INFO">${Payment_amount} = $249,613,155</msg>
+<var>${Payment_amount}</var>
+<arg>${looker_payment}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-25T14:10:19.819545" elapsed="2.124312"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Amount payed from new website: ${Payment_amount}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-06-25T14:10:21.943857" elapsed="0.001386"/>
+</kw>
+<status status="PASS" start="2024-06-25T14:10:10.882117" elapsed="11.063126"/>
+</kw>
+<kw name="Retrieve payment details from Qlik" owner="QlikVersion">
+<kw name="Get Window Handles" owner="SeleniumLibrary">
+<msg time="2024-06-25T14:10:22.956127" level="INFO">${all_windows} = ['8F57FE8F82DFBDF7302D08CFA90DE1B8', 'CB2F1F2D6ADE6A16E1A6F1F372AE7A29', 'D980B6A33087E831F4FEDB0E59E5021D']</msg>
+<var>${all_windows}</var>
+<doc>Returns all child window handles of the selected browser as a list.</doc>
+<status status="PASS" start="2024-06-25T14:10:21.947909" elapsed="1.008218"/>
+</kw>
+<kw name="Switch Window" owner="SeleniumLibrary">
+<arg>${all_windows}[-2]</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" start="2024-06-25T14:10:22.956127" elapsed="9.097312"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//td[normalize-space()='Reimbursement Management']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-06-25T14:10:32.054498" elapsed="2.040732"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-06-25T14:10:34.096580" level="INFO">Clicking element '//td[normalize-space()='Reimbursement Management']'.</msg>
+<arg>//td[normalize-space()='Reimbursement Management']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-25T14:10:34.095230" elapsed="2.075960"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-06-25T14:10:36.172240" level="INFO">Clicking element '//td[contains(text(),'How can I view details around my denied claims?')]'.</msg>
+<arg>//td[contains(text(),'How can I view details around my denied claims?')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-25T14:10:36.172240" elapsed="2.072157"/>
+</kw>
+<kw name="Get Window Handles" owner="SeleniumLibrary">
+<msg time="2024-06-25T14:10:39.254037" level="INFO">${all_windows} = ['8F57FE8F82DFBDF7302D08CFA90DE1B8', 'CB2F1F2D6ADE6A16E1A6F1F372AE7A29', 'D980B6A33087E831F4FEDB0E59E5021D', 'ECA8B81F9A0561D2787F2CCB22293D7F']</msg>
+<var>${all_windows}</var>
+<doc>Returns all child window handles of the selected browser as a list.</doc>
+<status status="PASS" start="2024-06-25T14:10:38.244397" elapsed="1.009640"/>
+</kw>
+<kw name="Switch Window" owner="SeleniumLibrary">
+<arg>${all_windows}[-1]</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" start="2024-06-25T14:10:39.255156" elapsed="19.198731"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//a[@href='javascript:;']//span[contains(text(),'▼')]</arg>
+<arg>timeout= 30</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-06-25T14:10:58.454944" elapsed="2.041497"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-06-25T14:11:00.497706" level="INFO">Clicking element '//a[@href='javascript:;']//span[contains(text(),'▼')]'.</msg>
+<arg>//a[@href='javascript:;']//span[contains(text(),'▼')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-25T14:11:00.497706" elapsed="2.089874"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-06-25T14:11:02.590894" level="INFO">Clicking element '//li[@title='Reimbursement']'.</msg>
+<arg>//li[@title='Reimbursement']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-25T14:11:02.590894" elapsed="2.081980"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-06-25T14:11:07.674123" level="INFO">Slept 3 seconds.</msg>
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-06-25T14:11:04.672874" elapsed="3.002254"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//div[contains(@class,'QvFrame') and contains(@class,'Document_CS09')]/div[2]/div/div[1]/div[5]/div/div[3]/div[2]/div/img</arg>
+<arg>timeout= 20s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-06-25T14:11:07.675128" elapsed="2.032374"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-06-25T14:11:09.708691" level="INFO">Clicking element '//div[contains(@class,'QvFrame') and contains(@class,'Document_CS09')]/div[2]/div/div[1]/div[5]/div/div[3]/div[2]/div/img'.</msg>
+<arg>//div[contains(@class,'QvFrame') and contains(@class,'Document_CS09')]/div[2]/div/div[1]/div[5]/div/div[3]/div[2]/div/img</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-25T14:11:09.708691" elapsed="2.071405"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-06-25T14:11:11.780096" level="INFO">Clicking element '//div[contains(@class,'QvFrame') and contains(@class,'Document_LB218')]/div[2]/div/div/div[2]/div'.</msg>
+<arg>//div[contains(@class,'QvFrame') and contains(@class,'Document_LB218')]/div[2]/div/div/div[2]/div</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-25T14:11:11.780096" elapsed="2.089654"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-06-25T14:11:13.871145" level="INFO">Clicking element '//div[contains(@class,'QvFrame') and contains(@class,'Document_CH84')]/div/div/div[2]'.</msg>
+<arg>//div[contains(@class,'QvFrame') and contains(@class,'Document_CH84')]/div/div/div[2]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-25T14:11:13.869750" elapsed="2.075972"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-06-25T14:11:18.947103" level="INFO">Slept 3 seconds.</msg>
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-06-25T14:11:15.945722" elapsed="3.001381"/>
+</kw>
+<status status="PASS" start="2024-06-25T14:10:21.946728" elapsed="57.001451"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-06-25T14:11:20.949296" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-06-25T14:11:18.948179" elapsed="2.001117"/>
+</kw>
+<kw name="Get Payment Details" owner="SeleniumPython">
+<msg time="2024-06-25T14:11:21.254179" level="INFO">Payment:  249211520.629999</msg>
+<msg time="2024-06-25T14:11:21.255178" level="INFO">${Qlik_payment_details} = 249211520.629999</msg>
+<var>${Qlik_payment_details}</var>
+<status status="PASS" start="2024-06-25T14:11:20.949296" elapsed="0.305882"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${Qlik_payment_details}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-06-25T14:11:21.256177" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-06-25T14:10:06.218473" elapsed="75.038706"/>
+</test>
+<status status="PASS" start="2024-06-25T14:07:00.649392" elapsed="260.616532"/>
+</suite>
+<statistics>
+<total>
+<stat pass="6" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="6" fail="0" skip="0" id="s1" name="Login">Login</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

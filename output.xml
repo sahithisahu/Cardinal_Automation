@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0.1 (Python 3.12.3 on win32)" generated="2024-07-02T15:20:52.349988" rpa="false" schemaversion="5">
+<suite id="s1" name="Compare ASP Q3" source="C:\Users\A. Sahithi\PycharmProjects\CardinalHealth\ASP_FILES\Compare_ASP_Q3.robot">
+<test id="s1-t1" name="Compare ASP Values" line="10">
+<kw name="ASP Qlik" owner="ASP">
+<msg time="2024-07-02T15:20:53.519041" level="INFO">CIN            NDC  ... Est ASP + 6.0% Total Margin Based on Most recent price Margin Change - Last Qtr vs Curr Qtr Based on Most recent price
+0              1118686    00054418425  ...                                            189.380                                                  3.200             
+1              1154020    00641036725  ...                                             -7.260                                                 -1.000             
+2              1267574    63323004401  ...                                            -71.695                                                 -7.750             
+3              1273218    00409397703  ...                                                NaN                                                    NaN             
+4              2119576    00023114501  ...                                            438.250                                                140.000             
+..                 ...            ...  ...                                                ...                                                    ...             
+287      Report Totals  Report Totals  ...                                        5398340.037                                             135399.878             
+288                NaN            NaN  ...                                                NaN                                                    NaN             
+289  Selection Status:            NaN  ...                                                NaN                                                    NaN             
+290         Year: 2024            NaN  ...                                                NaN                                                    NaN             
+291         Month: Jul            NaN  ...                                                NaN                                                    NaN             
+
+[292 rows x 18 columns]</msg>
+<msg time="2024-07-02T15:20:53.535701" level="INFO">${ASP_compare} =                    CIN            NDC  ... Est ASP + 6.0% Total Margin Based on Most recent price Margin Change - Last Qtr vs Curr Qtr Based on Most recent price
+0              1118686    00054418425 ...</msg>
+<var>${ASP_compare}</var>
+<status status="PASS" start="2024-07-02T15:20:53.044180" elapsed="0.491521"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${ASP_compare}6</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-07-02T15:20:53.535701" elapsed="0.015009"/>
+</kw>
+<status status="PASS" start="2024-07-02T15:20:53.044180" elapsed="0.507239"/>
+</test>
+<status status="PASS" start="2024-07-02T15:20:52.366520" elapsed="1.184899"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Compare ASP Q3">Compare ASP Q3</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
